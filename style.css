@@ -43,8 +43,10 @@ h2 {
 
 .container {
   width: 100vw;
+  /* min-height: 100svh; */
   display: grid;
   grid-template-columns: 200px 1fr;
+  /* grid-template-rows: 1fr 1fr auto 1fr; */
 }
 
 /* SIDEBAR */
@@ -52,6 +54,7 @@ h2 {
   /* background: var(--lightgrey); */
   border-right: 1px solid var(--medgrey);
   padding: 1rem;
+  grid-row: 1 / span 2;
 }
 
 .sidebar ul {
@@ -229,4 +232,5 @@ h2 {
   grid-column: 1 / -1;
   border-top: 1px solid var(--medgrey);
   padding: 2rem;
+  background-color: white;
 }
