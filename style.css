@@ -1,0 +1,70 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&f[]=general-sans@1&display=swap");
+
+:root {
+  font-size: 14px;
+  --lightgrey: rgb(236, 236, 236);
+  --medgrey: rgb(181, 181, 181);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "General Sans", sans-serif;
+  font-weight: 450;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Clash Grotesk", sans-serif;
+  /* font-weight: 600; */
+}
+
+.container {
+  width: 100vw;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+.sidebar {
+  /* background: var(--lightgrey); */
+  border-right: 1px solid var(--lightgrey);
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.nav {
+  margin-top: 3rem;
+}
+
+.nav-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  padding: 0.5rem;
+  background: var(--medgrey);
+  border-radius: 12px;
+  font-weight: 500;
+  align-items: center;
+}
+
+.nav-item-icon {
+  display: grid;
+  place-content: center center;
+  height: 40px;
+}
