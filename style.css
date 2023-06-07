@@ -54,7 +54,6 @@ h2 {
   grid-row: 1 / 4;
   border-right: 1px solid var(--medgrey);
   padding: 1rem;
-  grid-row: 1 / span 2;
 }
 
 .sidebar ul {
