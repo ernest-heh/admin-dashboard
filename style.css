@@ -4,12 +4,23 @@
   font-size: 14px;
   --body: "General Sans", sans-serif;
   --headers: "Clash Grotesk", sans-serif;
+  --white: #fff;
   --offwhite: #ebe8df;
   --offwhitedark: #dcd8cc;
   --lightgrey: rgb(236, 236, 236);
   --medgrey: rgb(126, 126, 126);
   --darkgrey: rgb(50, 50, 50);
   --accent: rgb(35, 106, 173);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #202020;
+    --offwhite: rgb(50, 50, 50);
+    --offwhitedark: rgb(77, 76, 71);
+    --darkgrey: #ebe8df;
+    --accent: rgb(38, 128, 212);
+  }
 }
 
 *,
@@ -192,7 +203,7 @@ h2 {
   font-family: var(--headers);
   text-decoration: none;
   font-weight: 600;
-  color: var(--offwhite);
+  color: var(--white);
   background: var(--accent);
   padding: 5px 0;
   width: 80px;
@@ -228,7 +239,7 @@ h2 {
 }
 
 .card {
-  background: white;
+  background: var(--white);
   padding: 3rem 2rem 1rem;
   border-radius: 8px;
   display: flex;
@@ -272,7 +283,7 @@ h2 {
 /* FOOTER */
 .footer {
   grid-column: 1 / -1;
-  background: white;
+  background: var(--white);
   border-top: 1px solid var(--medgrey);
   padding: 2rem 3rem;
   display: flex;
