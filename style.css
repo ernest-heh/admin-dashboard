@@ -45,7 +45,7 @@ h2 {
   min-height: 100svh;
   display: grid;
   grid-template-columns: 200px 1fr;
-  grid-template-rows: auto auto 1fr 100px;
+  grid-template-rows: auto auto 1fr px;
 }
 
 /* SIDEBAR */
@@ -54,6 +54,10 @@ h2 {
   grid-row: 1 / 4;
   border-right: 1px solid var(--medgrey);
   padding: 1rem;
+}
+
+.sidebar h1 {
+  text-align: center;
 }
 
 .sidebar ul {
@@ -80,11 +84,12 @@ h2 {
 .nav-item a {
   text-decoration: none;
   color: inherit;
-  transition: background 100ms ease-out;
+  transition: background 100ms ease-out, color 100ms ease-out;
 }
 
 .nav-item a:hover {
-  background: var(--offwhitedark);
+  background: var(--accent);
+  color: var(--offwhite);
 }
 
 .nav-item-icon {
@@ -132,7 +137,6 @@ h2 {
 
 .header-search input:focus {
   outline: none;
-  /* outline-offset: 2px; */
   width: 500px;
 }
 
@@ -210,8 +214,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 200px;
   gap: 2rem;
-  margin-bottom: 4rem;
-  /* min-height: 75vh; */
+  margin-bottom: 2rem;
 }
 
 .main h2 {
@@ -228,7 +231,8 @@ h2 {
   background: white;
   padding: 3rem 2rem 1rem;
   border-radius: 8px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -238,7 +242,7 @@ h2 {
 }
 
 .card-icons {
-  justify-self: end;
+  align-self: end;
 }
 
 .card-icons a {
@@ -250,6 +254,10 @@ h2 {
 .main-side-content div {
   border-top: 1px solid var(--medgrey);
   padding: 1rem 0;
+}
+
+.main-side-content h4 {
+  margin-bottom: 0.4rem;
 }
 
 .main-side p {
@@ -266,7 +274,22 @@ h2 {
   grid-column: 1 / -1;
   background: white;
   border-top: 1px solid var(--medgrey);
-  padding: 2rem;
-  display: grid;
+  padding: 2rem 3rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: end;
   align-items: end;
+  font-weight: 500;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.footer-icons a {
+  text-decoration: none;
+  color: inherit;
 }
