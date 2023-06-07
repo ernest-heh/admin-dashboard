@@ -43,9 +43,8 @@ h2 {
 
 .container {
   width: 100vw;
-  min-height: 100svh;
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 200px 1fr;
 }
 
 /* SIDEBAR */
@@ -184,6 +183,8 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 200px;
   gap: 2rem;
+  margin-bottom: 4rem;
+  /* min-height: 75vh; */
 }
 
 .main h2 {
@@ -221,4 +222,11 @@ h2 {
 .main-side a {
   text-decoration: none;
   color: var(--medgrey);
+}
+
+/* FOOTER */
+.footer {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--medgrey);
+  padding: 2rem;
 }
